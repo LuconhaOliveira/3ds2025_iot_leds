@@ -3,16 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Integração site-IOT</title>
+    <title>Integração IoT</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/style-index.css') }}">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/cores.css') }}">
 </head>
 <body>
-    <section class="container-body">
-        <div class="leds">
-            <button><a href="/ligarled">Ligar/Desligar led</a></button>
-        </div>
-        <div class="luzes-sala">
-            <p>As luzes da sala estão {{estado_luz}}</p>
-        </div>
-    </section>
+    <header class="container__title">
+        <h1>Integração</h1>
+    </header>
+    <main>
+        <section class="container__button">
+            <h2>Ações</h2>
+            <button><a href="/led/ligar">Acender Led</a></button>
+            <button><a href="/led/desligar">Apagar Led</a></button>
+        </section>
+        <section class="container__status-lampada">
+            <h2>Status da lampada</h2>
+            <p>A luz da lampada está: {{estado_luz}}</p>
+        </section>
+        <section class="container__status-led">
+            <h2>Status Led</h2>
+            <p>A luz do led está:</p>
+            {% if estado_led == "desligado" %}
+                <p style="color: red;">Desligado</p>
+            {% else %}
+                <p style="color: green">Ligado</p>
+            {% endif %}
+        </section>
+    </main> 
 </body>
 </html>
