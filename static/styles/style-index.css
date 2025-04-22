@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-font-main);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.container__title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 8vh;
+    background-color: var(--color-header);
+    color: var(--color-font-header);
+}
+
+main{
+    width: 100vw;
+    height: 92vh;
+    background-color: var(--color-main);
+    color: var(--color-font-main);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+.container__button{
+    width: 20%;
+    height: 30%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-header);
+    gap: 10px;
+}
+
+.container__button button{
+    border: none;
+    width: 30%;
+    height: 10%;
+    border-radius: 5px;
+    background-color: var(--color-main);
+}
+
+h2{
+    color: var(--color-font-header);
+}
+
+.container__status-lampada{
+    width: 20%;
+    height: 60%;
+    border-radius: 10px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-header);
+
+}
+
+.container__status-led{
+    width: 20%;
+    height: 60%;
+    border-radius: 10px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-header);
+}
