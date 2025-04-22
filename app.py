@@ -4,8 +4,8 @@ from model.controller_request import Request
 app = Flask(__name__)
 
 @app.route("/")
-def pagina_principal(fotoresistor=600):
-    if fotoresistor >500: 
+def pagina_principal():
+    if int(Request.luz_sala()) >500: 
         estado_luz = "ligadas"
     else:
         estado_luz = "desligadas"
