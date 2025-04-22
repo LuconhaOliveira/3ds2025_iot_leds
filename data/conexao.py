@@ -18,6 +18,6 @@ class Conexao:
         port=28179, 
         user="avnadmin", 
         password="AVNS_UQtCVbBpK2Bud9cV22F", 
-        database="defaultdb"
+        database="db_request"
         )
         return conexao
