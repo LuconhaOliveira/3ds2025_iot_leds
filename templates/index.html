@@ -20,7 +20,12 @@
         </section>
         <section class="container__status-lampada">
             <h2>Status da lampada</h2>
-            <p>A luz da lampada está: {{estado_luz}}</p>
+            <p>A luz da lampada está: </p>
+            {% if estado_luz == "desligadas" %}
+                <p style="color: red;">Desligado</p>
+            {% else %}
+                <p style="color: green">Ligado</p>
+            {% endif %}
         </section>
         <section class="container__status-led">
             <h2>Status Led</h2>
