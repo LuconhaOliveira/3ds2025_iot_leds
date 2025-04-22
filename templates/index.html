@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{url_for('static', filename='styles/cores.css') }}">
 </head>
 <body>
+
     <header class="container__title">
         <h1>Integração</h1>
     </header>
@@ -36,5 +37,14 @@
             {% endif %}
         </section>
     </main> 
+    <section class="container-body">
+        <div class="leds">
+            <button><a href="/led/ligar">Ligar led</a></button>
+            <button><a href="/led/desligar">Desligar led</a></button>
+        </div>
+        <div class="luzes-sala">
+            <p>As luzes da sala estão {{estado_luz}}</p>
+        </div>
+    </section>
 </body>
 </html>

@@ -29,3 +29,15 @@ class Request:
         conexao.close()
         
         return resultado
+    
+    def luz_sala():
+        conexao = Conexao.criar_conexao()
+        cursor=conexao.cursor(dictionary=True)
+        sql="select log,tempo from tb_room_lights ORDER BY tempo DESC LIMIT 1;"
+        cursor.execute(sql)
+        resultado=cursor.fetchone()
+
+        cursor.close()
+        conexao.close()
+        
+        return resultado
