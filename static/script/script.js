@@ -31,4 +31,5 @@ const alterarLampada = async () =>{
     }
 }
 
+setInterval(alterarLampada, 1000);
 setInterval(obterDados, 1000);
