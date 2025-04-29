@@ -6,9 +6,9 @@ const obterDados = async () => {
         console.log(data); // ✅ agora mostra os dados reais
 
         const led = document.getElementById('estado_led');
-        if (data.pedido === 1) {
+        if (data.pedido === '1') {
             led.textContent = "Ligado";
-        } else if (data.pedido === 0) {
+        } else if (data.pedido === '0') {
             led.textContent = "Desligado";
         } else {
             led.textContent = "Valor desconhecido";
