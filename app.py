@@ -3,13 +3,11 @@ from model.controller_request import Request
 
 app = Flask(__name__)
 
+estado_luz = 0
+
 @app.route("/")
 def pagina_principal():
-    fotoresistor=Request.luz_sala()
-    if int(fotoresistor["log"]) >500:
-        estado_luz = "ligadas"
-    else:
-        estado_luz = "desligadas"
+    global estado_luz
     return render_template("index.html",estado_luz=estado_luz)
 
 @app.route("/led/ligar")
@@ -25,6 +23,23 @@ def desligar_led():
 @app.route("/request")
 def request():
     return jsonify(Request.recuperar_request())
+
+@app.route("/luzSala/ligar")
+def ligar_luz_sala():
+    global estado_luz
+    estado_luz = "Ligado"
+    return "ligou"
+
+@app.route("/luzSala/desligar")
+def desligar_luz_sala():
+    global estado_luz
+    estado_luz = "Desligado"
+    return "desligou"
+
+@app.route("/get/estadoLuz")
+def get_estado_luz():
+    global estado_luz
+    return jsonify({"estado_luz": estado_luz})
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0",port=8080,debug=True)
