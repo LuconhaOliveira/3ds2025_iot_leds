@@ -27,13 +27,13 @@ def request():
 @app.route("/luzSala/ligar")
 def ligar_luz_sala():
     global estado_luz
-    estado_luz = "Ligado"
+    estado_luz = "ligadas"
     return "ligou"
 
 @app.route("/luzSala/desligar")
 def desligar_luz_sala():
     global estado_luz
-    estado_luz = "Desligado"
+    estado_luz = "desligadas"
     return "desligou"
 
 @app.route("/get/estadoLuz")
