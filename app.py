@@ -24,7 +24,7 @@ def desligar_led():
 def request():
     return jsonify(Request.recuperar_request())
 
-@app.route("/luzSala/ligar")
+@app.route("    ")
 def ligar_luz_sala():
     global estado_luz
     estado_luz = "ligadas"
