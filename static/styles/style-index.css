@@ -51,8 +51,8 @@ main{
 
 .container__button button{
     border: none;
-    width: 30%;
-    height: 10%;
+    width: 50%;
+    height: 20%;
     border-radius: 5px;
     background-color: var(--color-main);
 }
@@ -84,4 +84,38 @@ h2{
     justify-content: center;
     align-items: center;
     background-color: var(--color-header);
+}
+
+@media (max-width: 800px){
+    main {
+        display: flex;
+    }
+
+    .container__button,.container__status-lampada,.container__status-led{
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (max-width: 600px){
+    main{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        
+    }
+
+    .container__button, .container__status-lampada, .container__status-led{
+        margin: 10px 0;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
 }
